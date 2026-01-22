@@ -13,6 +13,7 @@ export default {
           cyan: "#00f0ff", // Neon Cyan
           purple: "#bd00ff", // Neon Purple
           pink: "#ff00aa", // Neon Pink/Magenta for accents
+          gold: "#CCA43B", // Premium Gold
         }
       },
       fontFamily: {

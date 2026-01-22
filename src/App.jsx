@@ -7,7 +7,7 @@ import { CTA, Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-nhiquela-dark text-white selection:bg-nhiquela-purple selection:text-white">
+    <div className="min-h-screen text-white selection:bg-nhiquela-purple selection:text-white">
       <Header />
       <main>
         <Hero />

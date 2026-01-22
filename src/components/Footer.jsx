@@ -121,7 +121,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm text-center md:text-left">
-                        © 2025 Nhiquela Serviços e Consultoria.LDA. Todos os direitos reservados.
+                        © 2026 Nhiquela Serviços e Consultoria.LDA. Todos os direitos reservados.
                     </p>
                     <div className="flex gap-6 text-sm">
                         <a href="#" className="text-gray-500 hover:text-white transition-colors">Política de Privacidade</a>
