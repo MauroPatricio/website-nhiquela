@@ -18,14 +18,24 @@ const CTA = () => {
                         Entre em contato conosco e descubra como podemos criar a solução digital perfeita para o seu negócio.
                     </p>
 
-                    <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <button className="flex items-center gap-2 bg-gradient-to-r from-nhiquela-cyan to-nhiquela-purple text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-nhiquela-purple/25 transition-all transform hover:-translate-y-1">
-                            Solicitar Orçamento <ArrowRight size={20} />
-                        </button>
-                        <button className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">
-                            <MessageCircle size={20} /> WhatsApp
-                        </button>
-                    </div>
+                  <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+  
+  {/* Botão Orçamento */}
+  <button className="flex items-center gap-2 bg-gradient-to-r from-nhiquela-cyan to-nhiquela-purple text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-nhiquela-purple/25 transition-all transform hover:-translate-y-1">
+    Solicitar Orçamento <ArrowRight size={20} />
+  </button>
+
+  {/* Botão WhatsApp */}
+  <a
+    href="https://wa.me/258853600036?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20o%20sistema%20de%20gest%C3%A3o."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 hover:border-green-400/40 transition-all"
+  >
+    <MessageCircle size={20} className="text-green-400" /> WhatsApp
+  </a>
+
+</div>
 
                     <div className="relative z-10 mt-16 pt-8 border-t border-white/5">
                         <p className="text-gray-500 text-sm mb-4">Nossos clientes confiam em nós</p>

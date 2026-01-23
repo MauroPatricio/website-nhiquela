@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    background-image: radial-gradient(ellipse at top, #111827, #0a0f1c, #000000);
+    background-image: radial-gradient(ellipse at top, #334155, #0f172a, #020617);
     @apply text-white font-sans antialiased;
   }
 }
