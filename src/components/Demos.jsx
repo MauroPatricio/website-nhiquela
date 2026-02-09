@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Calendar, Car, Heart, ShoppingBag, Utensils, ChevronLeft, ChevronRight } from 'lucide-react';
+import AntigravityModal from './AntigravityModal';
 
 const colorStyles = {
     emerald: {
@@ -59,7 +60,7 @@ const demos = [
             'Controlo de acesso por perfil (owner, manager, waiter, kitchen)'
         ]
     },
-         {
+    {
         title: 'Marketplace Avançado-Material de Construção',
         subtitle: 'E-commerce escalável e elegante',
         icon: ShoppingBag,
@@ -108,7 +109,7 @@ const demos = [
     }
 ];
 
-const PhoneMockup = ({ color, link }) => {
+const PhoneMockup = ({ color, link, isAntigravity, onVerMaisClick }) => {
     const styles = colorStyles[color];
 
     return (
@@ -125,14 +126,23 @@ const PhoneMockup = ({ color, link }) => {
 
                 <div className="h-24 w-full rounded-xl bg-white/5 border border-white/10" />
 
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`mt-auto h-10 w-full rounded-lg ${styles.button} flex items-center justify-center text-xs font-semibold text-white shadow-lg cursor-pointer hover:brightness-110 transition-all`}
-                >
-                    Live Demo
-                </a>
+                {isAntigravity ? (
+                    <button
+                        onClick={onVerMaisClick}
+                        className={`mt-auto h-10 w-full rounded-lg ${styles.button} flex items-center justify-center text-xs font-semibold text-white shadow-lg cursor-pointer hover:brightness-110 transition-all`}
+                    >
+                        Ver mais
+                    </button>
+                ) : (
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`mt-auto h-10 w-full rounded-lg ${styles.button} flex items-center justify-center text-xs font-semibold text-white shadow-lg cursor-pointer hover:brightness-110 transition-all`}
+                    >
+                        Live Demo
+                    </a>
+                )}
             </div>
         </div>
     );
@@ -140,6 +150,7 @@ const PhoneMockup = ({ color, link }) => {
 
 const Demos = () => {
     const scrollContainerRef = useRef(null);
+    const [isAntigravityModalOpen, setIsAntigravityModalOpen] = useState(false);
 
     const scroll = (direction) => {
         if (scrollContainerRef.current) {
@@ -188,6 +199,8 @@ const Demos = () => {
             >
                 {demos.map((demo, index) => {
                     const styles = colorStyles[demo.color];
+                    const isAntigravity = demo.title === 'Gestão Digital Inteligente';
+
                     return (
                         <div
                             key={index}
@@ -209,7 +222,12 @@ const Demos = () => {
                                 </div>
 
                                 <div className="mb-8 transform group-hover:scale-105 transition-transform duration-500 perspective-1000">
-                                    <PhoneMockup color={demo.color} link={demo.link} />
+                                    <PhoneMockup
+                                        color={demo.color}
+                                        link={demo.link}
+                                        isAntigravity={isAntigravity}
+                                        onVerMaisClick={() => setIsAntigravityModalOpen(true)}
+                                    />
                                 </div>
 
                                 <div className="space-y-4 mt-auto">
@@ -225,6 +243,11 @@ const Demos = () => {
                     );
                 })}
             </div>
+
+            <AntigravityModal
+                isOpen={isAntigravityModalOpen}
+                onClose={() => setIsAntigravityModalOpen(false)}
+            />
         </section>
     );
 };

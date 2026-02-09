@@ -11,6 +11,7 @@
   }
 }
 
+
 @layer utilities {
   .glass-card {
     @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
@@ -39,5 +40,48 @@
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+  }
+
+  /* Animation utilities */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Scroll reveal utilities */
+  .reveal {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-100 {
+    transition-delay: 100ms;
+  }
+
+  .reveal-delay-200 {
+    transition-delay: 200ms;
+  }
+
+  .reveal-delay-300 {
+    transition-delay: 300ms;
+  }
+
+  .reveal-delay-400 {
+    transition-delay: 400ms;
   }
 }
