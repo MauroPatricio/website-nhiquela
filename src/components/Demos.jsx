@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Calendar, Heart, Utensils, ChevronLeft, ChevronRight, Wallet } from 'lucide-react';
 import AntigravityModal from './AntigravityModal';
+import { restaurantContent, microcreditContent, clinicContent } from '../data/demoContent';
 
 const colorStyles = {
     emerald: {
@@ -51,6 +52,7 @@ const demos = [
         subtitle: 'Experimente um sistema completo para gerir o seu restaurante, bar ou estabelecimento similar. Controle mesas, pedidos, optimize o atendimento e tenha uma visão 360° do seu negócio com uma interface moderna e intuitiva.',
         icon: Utensils,
         color: 'orange',
+        content: restaurantContent,
         link: 'https://gestaomodernaonline.com/',
         features: [
             'Controle de mesas e pedidos em tempo real',
@@ -65,6 +67,7 @@ const demos = [
         subtitle: 'Descubra uma plataforma robusta e segura para administrar operações de microcrédito. Gerencie clientes, contratos, parcelas e acompanhe todo o ciclo de vida dos empréstimos de forma eficiente e transparente.',
         icon: Wallet,
         color: 'emerald',
+        content: microcreditContent,
         link: '#',
         features: [
             'Administração de operações de microcrédito',
@@ -79,6 +82,7 @@ const demos = [
         subtitle: 'Veja como a tecnologia pode otimizar a gestão da sua clínica ou consultório. Desde o agendamento de consultas e controle de prontuários até a gestão financeira, nossa solução oferece uma experiência premium em saúde digital.',
         icon: Heart,
         color: 'rose',
+        content: clinicContent,
         link: '#',
         features: [
             'Agendamento de consultas otimizado',
@@ -104,7 +108,7 @@ const demos = [
     }
 ];
 
-const PhoneMockup = ({ color, link, isAntigravity, onVerMaisClick }) => {
+const PhoneMockup = ({ color, link, isDetailedView, onVerMaisClick }) => {
     const styles = colorStyles[color];
 
     return (
@@ -121,7 +125,7 @@ const PhoneMockup = ({ color, link, isAntigravity, onVerMaisClick }) => {
 
                 <div className="h-24 w-full rounded-xl bg-white/5 border border-white/10" />
 
-                {isAntigravity ? (
+                {isDetailedView ? (
                     <button
                         onClick={onVerMaisClick}
                         className={`mt-auto h-10 w-full rounded-lg ${styles.button} flex items-center justify-center text-xs font-semibold text-white shadow-lg cursor-pointer hover:brightness-110 transition-all`}
@@ -146,6 +150,7 @@ const PhoneMockup = ({ color, link, isAntigravity, onVerMaisClick }) => {
 const Demos = () => {
     const scrollContainerRef = useRef(null);
     const [isAntigravityModalOpen, setIsAntigravityModalOpen] = useState(false);
+    const [selectedContent, setSelectedContent] = useState(null);
 
     const scroll = (direction) => {
         if (scrollContainerRef.current) {
@@ -157,6 +162,11 @@ const Demos = () => {
                 current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             }
         }
+    };
+
+    const handleVerMais = (content) => {
+        setSelectedContent(content);
+        setIsAntigravityModalOpen(true);
     };
 
     return (
@@ -194,7 +204,7 @@ const Demos = () => {
             >
                 {demos.map((demo, index) => {
                     const styles = colorStyles[demo.color];
-                    const isAntigravity = demo.title === 'Sistema de Gestão de Restauração';
+                    const isDetailedView = !!demo.content;
 
                     return (
                         <div
@@ -220,8 +230,8 @@ const Demos = () => {
                                     <PhoneMockup
                                         color={demo.color}
                                         link={demo.link}
-                                        isAntigravity={isAntigravity}
-                                        onVerMaisClick={() => setIsAntigravityModalOpen(true)}
+                                        isDetailedView={isDetailedView}
+                                        onVerMaisClick={() => handleVerMais(demo.content)}
                                     />
                                 </div>
 
@@ -242,6 +252,7 @@ const Demos = () => {
             <AntigravityModal
                 isOpen={isAntigravityModalOpen}
                 onClose={() => setIsAntigravityModalOpen(false)}
+                content={selectedContent}
             />
         </section>
     );
