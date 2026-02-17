@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Calendar, Car, Heart, ShoppingBag, Utensils, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, Heart, Utensils, ChevronLeft, ChevronRight, Wallet } from 'lucide-react';
 import AntigravityModal from './AntigravityModal';
 
 const colorStyles = {
@@ -47,64 +47,59 @@ const colorStyles = {
 
 const demos = [
     {
-        title: 'Gestão Digital Inteligente',
-        subtitle: 'Pedidos, mesas e gestão moderna integrados',
+        title: 'Sistema de Gestão de Restauração',
+        subtitle: 'Experimente um sistema completo para gerir o seu restaurante, bar ou estabelecimento similar. Controle mesas, pedidos, optimize o atendimento e tenha uma visão 360° do seu negócio com uma interface moderna e intuitiva.',
         icon: Utensils,
         color: 'orange',
         link: 'https://gestaomodernaonline.com/',
         features: [
-            'Menu digital com QR Code Premium',
-            'Gestão de pedidos em tempo real (salão, balcão e cozinha)',
-            'Gestão de mesas em tempo real',
-            'Relatórios de vendas e desempenho',
-            'Controlo de acesso por perfil (owner, manager, waiter, kitchen)'
+            'Controle de mesas e pedidos em tempo real',
+            'Otimização do atendimento',
+            'Visão 360° do negócio',
+            'Interface moderna e intuitiva',
+            'Relatórios de desempenho detalhados'
         ]
     },
     {
-        title: 'Marketplace Avançado-Material de Construção',
-        subtitle: 'E-commerce escalável e elegante',
-        icon: ShoppingBag,
-        color: 'purple',
-        link: 'https://visacasa.gestaomodernaonline.com',
+        title: 'Sistema de Gestão de Microcréditos',
+        subtitle: 'Descubra uma plataforma robusta e segura para administrar operações de microcrédito. Gerencie clientes, contratos, parcelas e acompanhe todo o ciclo de vida dos empréstimos de forma eficiente e transparente.',
+        icon: Wallet,
+        color: 'emerald',
+        link: '#',
         features: [
-            'Compra rápida e centralizada de insumos e materiais',
-            'Comparação de preços entre fornecedores',
-            'Histórico de compras e faturação organizada',
-            'Pagamentos flexíveis e seguros (M-Pesa, cartão, transferência)'
+            'Administração de operações de microcrédito',
+            'Gestão de clientes e contratos',
+            'Controle de parcelas e ciclo de vida',
+            'Segurança e transparência',
+            'Relatórios financeiros completos'
         ]
     },
-
     {
-        title: 'Saúde Digital',
-        subtitle: 'Experiência premium em telemedicina',
+        title: 'Sistema de Gestão de Clínicas',
+        subtitle: 'Veja como a tecnologia pode otimizar a gestão da sua clínica ou consultório. Desde o agendamento de consultas e controle de prontuários até a gestão financeira, nossa solução oferece uma experiência premium em saúde digital.',
         icon: Heart,
         color: 'rose',
         link: '#',
         features: [
-            'Consultas online seguras',
-            'Videochamadas em alta qualidade'
+            'Agendamento de consultas otimizado',
+            'Controle de prontuários eletrônicos',
+            'Gestão financeira integrada',
+            'Experiência premium em saúde digital',
+            'Histórico clínico completo'
         ]
     },
     {
-        title: 'Mobilidade Urbana',
-        subtitle: 'Plataforma moderna de transporte',
-        icon: Car,
-        color: 'amber',
-        link: '#',
-        features: [
-            'Solicitação instantânea de corridas',
-            'Rastreamento em tempo real'
-        ]
-    },
-    {
-        title: 'Agendamento Inteligente',
-        subtitle: 'Automação para profissionais exigentes',
+        title: 'Sistema de Gestão de Agendamento Inteligente',
+        subtitle: 'Conheça uma ferramenta poderosa para negócios que dependem de agendamentos. Com uma lógica inteligente, este sistema permite uma organização impecável da agenda, reduzindo falhas de comunicação e maximizando a produtividade da sua equipe.',
         icon: Calendar,
-        color: 'emerald',
+        color: 'purple',
         link: '#',
         features: [
-            'Agenda dinâmica com IA',
-            'Confirmações automáticas por SMS e WhatsApp'
+            'Lógica inteligente de agendamento',
+            'Organização impecável da agenda',
+            'Redução de falhas de comunicação',
+            'Maximização da produtividade da equipe',
+            'Integração com calendários externos'
         ]
     }
 ];
@@ -169,10 +164,10 @@ const Demos = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex items-end justify-between">
                 <div>
                     <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
-                        Soluções Digitais de Alto Padrão
+                        Explore Nossas Soluções em Ação
                     </h2>
                     <p className="text-gray-400 max-w-xl text-lg leading-relaxed">
-                        Plataformas modernas, escaláveis e desenhadas para negócios que querem liderar o mercado.
+                        Convidamos você a conhecer de perto o poder e a versatilidade das nossas plataformas de gestão digital. Através dos links abaixo, você pode acessar demonstrações ao vivo de sistemas completos, desenvolvidos para transformar a operação de diferentes tipos de negócios. Navegue, teste e descubra a solução ideal para o seu empreendimento.
                     </p>
                 </div>
 
@@ -199,7 +194,7 @@ const Demos = () => {
             >
                 {demos.map((demo, index) => {
                     const styles = colorStyles[demo.color];
-                    const isAntigravity = demo.title === 'Gestão Digital Inteligente';
+                    const isAntigravity = demo.title === 'Sistema de Gestão de Restauração';
 
                     return (
                         <div
