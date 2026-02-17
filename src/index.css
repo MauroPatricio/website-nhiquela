@@ -84,4 +84,9 @@
   .reveal-delay-400 {
     transition-delay: 400ms;
   }
+
+  /* Radial gradient for mouse follower */
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+  }
 }
