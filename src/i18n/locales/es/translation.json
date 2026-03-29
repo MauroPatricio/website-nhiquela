@@ -1,0 +1,385 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "demos": "Demos",
+    "about": "Sobre",
+    "contact": "Contacto",
+    "login": "Acceso",
+    "cta": "Empezar Ahora"
+  },
+  "hero": {
+    "tag": "Nuestros Servicios",
+    "title_main": "Todo lo que necesitas para",
+    "title_highlight": "crecer",
+    "description": "Ofrecemos soluciones completas de desarrollo, desde el concepto hasta el lanzamiento y más allá. Transforme su visión digital en realidad.",
+    "cta_main": "Ver Servicios",
+    "cta_secondary": "Ver Demostraciones"
+  },
+  "services": {
+    "mobile": {
+      "title": "Apps Móviles",
+      "description": "Aplicaciones nativas e híbridas para iOS y Android con diseño moderno y rendimiento excepcional."
+    },
+    "web": {
+      "title": "Desarrollo Web",
+      "description": "Plataformas web responsivas y sistemas personalizados que escalan con su negocio."
+    },
+    "design": {
+      "title": "UI/UX Design",
+      "description": "Interfaces intuitivas y experiencias de usuario que encantan y convierten visitantes en clientes."
+    },
+    "integrations": {
+      "title": "Integraciones",
+      "description": "Conectamos su aplicación con APIs, pasarelas de pago y sistemas externos."
+    },
+    "security": {
+      "title": "Seguridad",
+      "description": "Protección de datos y cumplimiento para mantener seguros a sus usuarios."
+    },
+    "support": {
+      "title": "Soporte Continuo",
+      "description": "Mantenimiento, actualizaciones y soporte técnico para garantizar el funcionamiento perfecto."
+    }
+  },
+  "pricing": {
+    "monthly": "Mensual",
+    "monthly_label": "mensual",
+    "promotional": "Valor promocional",
+    "investment": "Inversión"
+  },
+  "cta": {
+    "title_main": "¿Estás listo para",
+    "title_highlight": "revolucionar tu negocio?",
+    "description": "Descubra cómo nuestro sistema de gestión para restaurantes, cafés, pizzerías y bares puede aumentar sus ventas, optimizar procesos y encantar a sus clientes. Póngase en contacto ahora y transforme su restaurante en un referente de modernidad y eficiencia.",
+    "button_quote": "Solicitar Presupuesto",
+    "button_whatsapp": "WhatsApp",
+    "social_proof": "Más de 50 restaurantes confían en nosotros"
+  },
+  "footer": {
+    "description": "Transformamos ideas en soluciones digitales que hacen crecer su negocio. Ya sean apps, sitios web o sistemas de gestión, estamos listos para innovar junto a usted.",
+    "services_title": "Servicios",
+    "company_title": "Empresa",
+    "contact_title": "Contacto",
+    "location": "Maputo, Mozambique",
+    "copyright": "© 2026 Nhiquela Servicios y Consultoría. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Uso"
+  },
+  "common": {
+    "free_trial": "15 Días Gratis",
+    "demo": "Demostración",
+    "premium_experience": "Pruébalo Ahora",
+    "get_started": "Empezar Ahora",
+    "safe_environment": "Ambiente Seguro • Riesgo Cero",
+    "flow": "Flujo Automático"
+  },
+  "demos": {
+    "section_title": "Sistemas que aumentan las ventas y hacen crecer su negocio",
+    "section_subtitle": "Automatice procesos, reduzca errores e incremente sus ganancias con soluciones inteligentes.",
+    "section_description": "Vea en la práctica cómo transformar su negocio.",
+    "common": {
+      "popular": "Popular",
+      "how_it_works": "Ver cómo funciona",
+      "test_now": "Probar ahora"
+    },
+    "restaurant": {
+      "main_title": "Sistema que aumenta las ventas de su restaurante automáticamente",
+      "subtitle": "Elimine errores, reduzca el tiempo de espera y permita que sus clientes realicen pedidos directamente desde su móvil a través de código QR.",
+      "highlight": "Más rapidez. Más eficiencia. Más beneficio — sin esfuerzo.",
+      "features": [
+        "Pedidos directos por el cliente (cero errores)",
+        "Mayor velocidad de servicio",
+        "Más ventas por mesa automáticamente",
+        "Control total en tiempo real",
+        "Experiencia moderna que fideliza clientes"
+      ],
+      "title": {
+        "main": "Sistema Inteligente de",
+        "highlight": "Gestión de Restaurantes",
+        "description": "Todo lo que su restaurante necesita en un único sistema moderno e intuitivo.",
+        "subDescription": "Perfecto para pizzerías, cafés, bares y restaurantes que buscan aumentar ventas, eficiencia y satisfacción del cliente.",
+        "tag": "Gestão Moderna"
+      },
+      "sections": {
+        "dashboard_premium": {
+          "title": "Panel Premium",
+          "subtitle": "Vista del Propietario",
+          "content_title": "🎯 El Cerebro del Negocio",
+          "content_description": "Seguimiento de todos los restaurantes en tiempo real. Decisiones estratégicas basadas en datos claros y gráficos intuitivos.",
+          "col1_title": "Rendimiento en Tiempo Real",
+          "col1_items": [
+            "Ingresos diarios, semanales y mensuales",
+            "Comparación de facturación entre unidades",
+            "Total de pedidos realizados",
+            "Crecimiento porcentual por restaurante",
+            "Ticket medio por cliente"
+          ],
+          "col2_title": "📊 Visual Intuitivo",
+          "col2_items": [
+            "Gráficos de líneas para tendencias",
+            "Gráficos de barras para comparaciones",
+            "Gráficos circulares para distribución de pedidos"
+          ]
+        },
+        "dashboard_individual": {
+          "title": "Panel Individual",
+          "subtitle": "Vista por Restaurante",
+          "content_description": "Cada restaurante tiene una vista personalizada, centrada en el rendimiento y la eficiencia.",
+          "card1_title": "💰 Financiero",
+          "card1_items": [
+            "Ingresos diarios y mensuales",
+            "Total facturado",
+            "Pagos confirmados y pendientes",
+            "Métodos de pago más utilizados"
+          ],
+          "card2_title": "🍽️ Operativo",
+          "card2_items": [
+            "Pedidos realizados y completados",
+            "Tiempo medio de servicio",
+            "Pedidos cancelados"
+          ],
+          "card3_title": "👥 Clientes",
+          "card3_items": [
+            "Número de clientes atendidos",
+            "Clientes recurrentes",
+            "Calificación promedio del restaurante"
+          ]
+        },
+        "order_management": {
+          "title": "Gestión de Pedidos",
+          "subtitle": "En Tiempo Real",
+          "content_title": "🔔 Control Total de Pedidos",
+          "content_highlight": "No pierda nunca más un pedido.",
+          "col1_items": [
+            "Lista de pedidos activos en tiempo real",
+            "Notificaciones sonoras y visuales de nuevos pedidos",
+            "Resaltado automático de la mesa solicitante"
+          ],
+          "col2_title": "Estados del Pedido",
+          "status_items": [
+            "⏳ Pendiente",
+            "✅ Aceptado",
+            "👨‍🍳 En preparación",
+            "🍽️ Listo",
+            "💳 Pagado"
+          ],
+          "flow": [
+            "Pedido confirmado",
+            "Envío directo a la cocina",
+            "Actualización instantánea para el cliente"
+          ]
+        },
+        "client_engagement": {
+          "title": "Compromiso del Cliente",
+          "subtitle": "Más Satisfacción y Fidelización",
+          "content_description": "Seguimiento de clientes, historial de pedidos y creación de promociones personalizadas para fidelizar a cada visitante.",
+          "items": [
+            "Programa de fidelización integrado",
+            "Mensajes automáticos de promociones",
+            "Comentarios en tiempo real del cliente",
+            "Ranking de platos más pedidos"
+          ]
+        },
+        "final_results": {
+          "title": "🏁 Resultado Final",
+          "subtitle": "Transforme su Restaurante",
+          "description": "Una solución completa que aumenta las ventas, la eficiencia y la satisfacción del cliente.",
+          "results": [
+            "Control total del negocio",
+            "Decisiones basadas en datos precisos",
+            "Más eficiencia operativa",
+            "Mayor facturación",
+            "Experiencia premium para clientes",
+            "Valoración del restaurante en el mercado"
+          ],
+          "cta_text": "Solicitar Demostración →"
+        }
+      }
+    },
+    "microcredit": {
+      "main_title": "Control total de su negocio de microcréditos",
+      "subtitle": "Gestione clientes, préstamos y pagos con total transparencia y seguridad.",
+      "highlight": "Más control. Menos riesgo. Crecimiento escalable.",
+      "features": [
+        "Gestión completa de clientes y préstamos",
+        "Control automático de pagos",
+        "Reducción de errores humanos",
+        "Informes financieros detallados",
+        "Escalabilidad del negocio"
+      ],
+      "title": {
+        "main": "Sistema Inteligente de",
+        "highlight": "Gestión de Microcréditos",
+        "description": "Control total sobre su cartera de crédito con seguridad, transparencia y eficiencia.",
+        "subDescription": "Ideal para instituciones financieras que buscan automatizar procesos y reducir riesgos de morosidad.",
+        "tag": "Gestión Financiera"
+      },
+      "sections": {
+        "dashboard_pro": {
+          "title": "Panel Financiero",
+          "subtitle": "Resumen del Negocio",
+          "content_title": "📊 Inteligencia de Datos",
+          "content_description": "Seguimiento de la salud financiera de su institución en tiempo real con métricas precisas.",
+          "col1_title": "Métricas de Cartera",
+          "col1_items": [
+            "Total de capital en circulación",
+            "Tasa de retorno de inversión",
+            "Volumen de nuevos préstamos",
+            "Proyección de cobros mensuales",
+            "Indicador de salud de la cartera"
+          ],
+          "col2_title": "📉 Control de Riesgo",
+          "col2_items": [
+            "Índice de morosidad (PAR)",
+            "Alertas de pagos atrasados",
+            "Análisis de perfil de crédito",
+            "Provisión para deudores dudosos"
+          ]
+        },
+        "client_management": {
+          "title": "Gestión de Clientes",
+          "subtitle": "KYC e Historial",
+          "content_description": "Mantenga un registro completo y seguro de todos sus prestatarios.",
+          "card1_title": "👤 Perfil Completo",
+          "card1_items": [
+            "Documentación digitalizada",
+            "Historial de pagos",
+            "Puntuación de crédito interna",
+            "Contactos y referencias"
+          ],
+          "card2_title": "📝 Contratos",
+          "card2_items": [
+            "Generación automática de contratos",
+            "Firmas digitales",
+            "Archivo de garantías",
+            "Términos de compromiso"
+          ]
+        },
+        "loan_lifecycle": {
+          "title": "Ciclo del Préstamo",
+          "subtitle": "Del Pedido a la Liquidación",
+          "content_title": "🔄 Automatización de Procesos",
+          "content_highlight": "Agilidad en la concesión y rigor en el cobro.",
+          "flow": [
+            "Análisis de Crédito",
+            "Aprobación y Desembolso",
+            "Seguimiento de Cuotas",
+            "Liquidación Total"
+          ]
+        },
+        "final_results": {
+          "title": "🏁 Impacto en el Negocio",
+          "subtitle": "Eficiencia y Seguridad",
+          "description": "Una solución que profesionaliza su operación de crédito y garantiza el crecimiento sostenible.",
+          "results": [
+            "Reducción drástica de la morosidad",
+            "Procesos 100% auditables",
+            "Mayor agilidad en la aprobación",
+            "Control total de flujo de caja",
+            "Seguridad jurídica y documental",
+            "Escalabilidad de la operación"
+          ],
+          "cta_text": "Solicitar Demo de Microcréditos →"
+        }
+      }
+    },
+    "clinic": {
+      "main_title": "Modernice su clínica con tecnología profesional",
+      "subtitle": "Organice citas, expedientes y finanzas en un solo sistema inteligente.",
+      "highlight": "Más organización. Más confianza. Mejor atención.",
+      "features": [
+        "Programación rápida y sin conflictos",
+        "Expedientes digitales seguros",
+        "Gestión financiera integrada",
+        "Atención más profesional",
+        "Mejor experiencia del paciente"
+      ],
+      "title": {
+        "main": "Sistema Moderno de",
+        "highlight": "Gestión Clínica y Médica",
+        "description": "Transforme la atención y la gestión de su clínica con tecnología de punta.",
+        "subDescription": "Perfecto para clínicas médicas y dentales, centros de estética y consultorios privados.",
+        "tag": "Gestión en Salud"
+      },
+      "sections": {
+        "medical_dashboard": {
+          "title": "Panel Clínico",
+          "subtitle": "Control de la Unidad",
+          "content_title": "🏥 Vista 360° de la Clínica",
+          "content_description": "Gestione flujos de pacientes y rendimiento del equipo médico en una interfaz intuitiva.",
+          "col1_title": "Atención",
+          "col1_items": [
+            "Pacientes programados vs atendidos",
+            "Tiempo medio de espera",
+            "Especialidades más solicitadas",
+            "Tasa de cancelación y no presentación"
+          ],
+          "col2_title": "💰 Finanzas Salud",
+          "col2_items": [
+            "Facturación por seguro o privado",
+            "Control de auditorías médicas",
+            "Pagos a profesionales",
+            "Flujo de caja de la clínica"
+          ]
+        },
+        "scheduling": {
+          "title": "Agenda Inteligente",
+          "subtitle": "Organización Total",
+          "content_description": "Programación rápida que evita conflictos y optimiza el tiempo de los profesionales.",
+          "items": [
+            "Multi-agendas por profesional o sala",
+            "Recordatorios automáticos por WhatsApp/Email",
+            "Lista de espera inteligente",
+            "Confirmación de cita en un clic"
+          ]
+        },
+        "patient_records": {
+          "title": "Expediente Digital",
+          "subtitle": "Seguridad y Agilidad",
+          "content_title": "📁 Historial Clínico Seguro",
+          "content_highlight": "Acceda a la información del paciente desde cualquier lugar con total seguridad.",
+          "card1_title": "🩺 Clínico",
+          "card1_items": [
+            "Evolución del paciente",
+            "Prescripciones digitales",
+            "Solicitud de exámenes",
+            "Anamnesis personalizada"
+          ],
+          "card2_title": "🖼️ Exámenes",
+          "card2_items": [
+            "Adjunto de informes e imágenes",
+            "Comparativa de resultados",
+            "Historial de laboratorio",
+            "Alertas de valores críticos"
+          ]
+        },
+        "final_results": {
+          "title": "🏁 Excelencia Médica",
+          "subtitle": "Resultados que Aparecen",
+          "description": "Una clínica organizada atiende mejor y genera más confianza en los pacientes.",
+          "results": [
+            "Atención más ágil y focalizada",
+            "Eliminación de papel y burocracia",
+            "Mejor control financiero",
+            "Reducción de ausencias de pacientes",
+            "Cumplimiento con normas de salud",
+            "Aumento en la retención de pacientes"
+          ],
+          "cta_text": "Solicitar Demo para Clínica →"
+        }
+      }
+    },
+    "scheduling": {
+      "main_title": "No pierda más clientes por fallos de programación",
+      "subtitle": "Automatice su agenda y maximice el tiempo de su equipo con inteligencia.",
+      "highlight": "Más productividad. Más organización. Más resultados.",
+      "features": [
+        "Programación automática inteligente",
+        "Reducción de olvidos",
+        "Más productividad del equipo",
+        "Organización total de la agenda",
+        "Máximo aprovechamiento del tiempo"
+      ]
+    }
+  }
+}

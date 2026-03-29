@@ -1,0 +1,385 @@
+{
+  "nav": {
+    "services": "Services",
+    "demos": "Demos",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "cta": "Get Started"
+  },
+  "hero": {
+    "tag": "Our Services",
+    "title_main": "Everything you need to",
+    "title_highlight": "grow",
+    "description": "We offer complete development solutions, from concept to launch and beyond. Transform your digital vision into reality.",
+    "cta_main": "View Services",
+    "cta_secondary": "View Demos"
+  },
+  "services": {
+    "mobile": {
+      "title": "Mobile Apps",
+      "description": "Native and hybrid apps for iOS and Android with modern design and exceptional performance."
+    },
+    "web": {
+      "title": "Web Development",
+      "description": "Responsive web platforms and custom systems that scale with your business."
+    },
+    "design": {
+      "title": "UI/UX Design",
+      "description": "Intuitive interfaces and user experiences that delight and convert visitors into customers."
+    },
+    "integrations": {
+      "title": "Integrations",
+      "description": "We connect your application with APIs, payment gateways, and external systems."
+    },
+    "security": {
+      "title": "Security",
+      "description": "Data protection and compliance to keep your users safe."
+    },
+    "support": {
+      "title": "Continuous Support",
+      "description": "Maintenance, updates, and technical support to ensure perfect operation."
+    }
+  },
+  "pricing": {
+    "monthly": "Monthly",
+    "monthly_label": "monthly",
+    "promotional": "Promotional value",
+    "investment": "Investment"
+  },
+  "cta": {
+    "title_main": "Are you ready to",
+    "title_highlight": "revolutionize your business?",
+    "description": "Discover how our management system for restaurants, cafes, pizzerias and bars can increase your sales, optimize processes and delight your customers. Get in touch now and transform your restaurant into a benchmark of modernity and efficiency.",
+    "button_quote": "Request a Quote",
+    "button_whatsapp": "WhatsApp",
+    "social_proof": "More than 50 restaurants trust us"
+  },
+  "footer": {
+    "description": "We transform ideas into digital solutions that make your business grow. Whether it's apps, websites or management systems, we're ready to innovate along with you.",
+    "services_title": "Services",
+    "company_title": "Company",
+    "contact_title": "Contact",
+    "location": "Maputo, Mozambique",
+    "copyright": "© 2026 Nhiquela Services and Consulting. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "common": {
+    "free_trial": "15 Days Free",
+    "demo": "Demo",
+    "premium_experience": "Try it Now",
+    "get_started": "Get Started",
+    "safe_environment": "Safe Environment • Zero Risk",
+    "flow": "Automatic Flow"
+  },
+  "demos": {
+    "section_title": "Systems that increase sales and make your business grow",
+    "section_subtitle": "Automate processes, reduce errors, and increase your profits with intelligent solutions.",
+    "section_description": "See in practice how to transform your business.",
+    "common": {
+      "popular": "Popular",
+      "how_it_works": "See how it works",
+      "test_now": "Test now"
+    },
+    "restaurant": {
+      "main_title": "System that automatically increases your restaurant's sales",
+      "subtitle": "Eliminate errors, reduce waiting time, and allow your customers to order directly from their phone via QR Code.",
+      "highlight": "Faster. More efficient. More profit — effortlessly.",
+      "features": [
+        "Direct orders by the customer (zero errors)",
+        "Increased service speed",
+        "More sales per table automatically",
+        "Total control in real time",
+        "Modern experience that loyalizes customers"
+      ],
+      "title": {
+        "main": "Intelligent System for",
+        "highlight": "Restaurant Management",
+        "description": "Everything your restaurant needs in a single modern and intuitive system.",
+        "subDescription": "Perfect for pizzerias, cafes, bars, and restaurants that want to increase sales, efficiency, and customer satisfaction.",
+        "tag": "Modern Management"
+      },
+      "sections": {
+        "dashboard_premium": {
+          "title": "Premium Dashboard",
+          "subtitle": "Owner's View",
+          "content_title": "🎯 The Brain of the Business",
+          "content_description": "Track all restaurants in real time. Strategic decisions based on clear data and intuitive charts.",
+          "col1_title": "Real-Time Performance",
+          "col1_items": [
+            "Daily, weekly, and monthly revenue",
+            "Comparison of revenue between units",
+            "Total orders placed",
+            "Percentage growth per restaurant",
+            "Average ticket per customer"
+          ],
+          "col2_title": "📊 Intuitive Visual",
+          "col2_items": [
+            "Line charts for trends",
+            "Bar charts for comparisons",
+            "Pie charts for order distribution"
+          ]
+        },
+        "dashboard_individual": {
+          "title": "Individual Dashboard",
+          "subtitle": "View by Restaurant",
+          "content_description": "Each restaurant has a personalized view, focused on performance and efficiency.",
+          "card1_title": "💰 Financial",
+          "card1_items": [
+            "Daily and monthly revenue",
+            "Total billed",
+            "Confirmed and pending payments",
+            "Most used payment methods"
+          ],
+          "card2_title": "🍽️ Operational",
+          "card2_items": [
+            "Orders placed and completed",
+            "Average service time",
+            "Cancelled orders"
+          ],
+          "card3_title": "👥 Customers",
+          "card3_items": [
+            "Number of customers served",
+            "Recurring customers",
+            "Average restaurant rating"
+          ]
+        },
+        "order_management": {
+          "title": "Order Management",
+          "subtitle": "In Real Time",
+          "content_title": "🔔 Total Order Control",
+          "content_highlight": "Never miss an order again.",
+          "col1_items": [
+            "List of active orders in real time",
+            "Sound and visual notifications of new orders",
+            "Automatic highlight of the requesting table"
+          ],
+          "col2_title": "Order Statuses",
+          "status_items": [
+            "⏳ Pending",
+            "✅ Accepted",
+            "👨‍🍳 In preparation",
+            "🍽️ Ready",
+            "💳 Paid"
+          ],
+          "flow": [
+            "Order confirmed",
+            "Sent directly to the kitchen",
+            "Instant update for the customer"
+          ]
+        },
+        "client_engagement": {
+          "title": "Client Engagement",
+          "subtitle": "More Satisfaction and Loyalty",
+          "content_description": "Track clients, order history, and create personalized promotions to loyalize every visitor.",
+          "items": [
+            "Integrated loyalty program",
+            "Automatic promotional messages",
+            "Real-time customer feedback",
+            "Ranking of most ordered dishes"
+          ]
+        },
+        "final_results": {
+          "title": "🏁 Final Result",
+          "subtitle": "Transform Your Restaurant",
+          "description": "A complete solution that increases sales, efficiency, and customer satisfaction.",
+          "results": [
+            "Total business control",
+            "Decisions based on precise data",
+            "More operational efficiency",
+            "Higher revenue",
+            "Premium experience for customers",
+            "Restaurant valuation in the market"
+          ],
+          "cta_text": "Request Demonstration →"
+        }
+      }
+    },
+    "microcredit": {
+      "main_title": "Total control of your microcredit business",
+      "subtitle": "Manage customers, loans, and payments with total transparency and security.",
+      "highlight": "More control. Less risk. Scalable growth.",
+      "features": [
+        "Complete management of customers and loans",
+        "Automatic payment control",
+        "Reduction of human errors",
+        "Detailed financial reports",
+        "Business scalability"
+      ],
+      "title": {
+        "main": "Intelligent System for",
+        "highlight": "Microcredit Management",
+        "description": "Total control over your credit portfolio with security, transparency, and efficiency.",
+        "subDescription": "Ideal for financial institutions seeking to automate processes and reduce delinquency risks.",
+        "tag": "Financial Management"
+      },
+      "sections": {
+        "dashboard_pro": {
+          "title": "Financial Dashboard",
+          "subtitle": "Business Overview",
+          "content_title": "📊 Data Intelligence",
+          "content_description": "Track your institution's financial health in real time with precise metrics.",
+          "col1_title": "Portfolio Metrics",
+          "col1_items": [
+            "Total capital in circulation",
+            "Return on investment rate",
+            "Volume of new loans",
+            "Projection of monthly receivables",
+            "Portfolio health indicator"
+          ],
+          "col2_title": "📉 Risk Control",
+          "col2_items": [
+            "Delinquency rate (PAR)",
+            "Alerts for late payments",
+            "Credit profile analysis",
+            "Provision for doubtful debts"
+          ]
+        },
+        "client_management": {
+          "title": "Client Management",
+          "subtitle": "KYC and History",
+          "content_description": "Maintain a complete and secure register of all your borrowers.",
+          "card1_title": "👤 Complete Profile",
+          "card1_items": [
+            "Digitized documentation",
+            "Payment history",
+            "Internal credit score",
+            "Contacts and references"
+          ],
+          "card2_title": "📝 Contracts",
+          "card2_items": [
+            "Automatic contract generation",
+            "Digital signatures",
+            "Security archive",
+            "Commitment terms"
+          ]
+        },
+        "loan_lifecycle": {
+          "title": "Loan Lifecycle",
+          "subtitle": "From Application to Settlement",
+          "content_title": "🔄 Process Automation",
+          "content_highlight": "Agility in granting and rigor in receiving.",
+          "flow": [
+            "Credit Analysis",
+            "Approval and Disbursement",
+            "Installment Monitoring",
+            "Total Settlement"
+          ]
+        },
+        "final_results": {
+          "title": "🏁 Business Impact",
+          "subtitle": "Efficiency and Security",
+          "description": "A solution that professionalizes your credit operation and guarantees sustainable growth.",
+          "results": [
+            "Drastic reduction in delinquency",
+            "100% auditable processes",
+            "More agility in approval",
+            "Total cash flow control",
+            "Legal and documentary security",
+            "Operation scalability"
+          ],
+          "cta_text": "Request Microcredit Demo →"
+        }
+      }
+    },
+    "clinic": {
+      "main_title": "Modernize your clinic with professional technology",
+      "subtitle": "Organize appointments, records, and finances in a single intelligent system.",
+      "highlight": "More organization. More trust. Better service.",
+      "features": [
+        "Fast and conflict-free scheduling",
+        "Secure digital records",
+        "Integrated financial management",
+        "More professional service",
+        "Better patient experience"
+      ],
+      "title": {
+        "main": "Modern System for",
+        "highlight": "Clinical and Medical Management",
+        "description": "Transform the service and management of your clinic with cutting-edge technology.",
+        "subDescription": "Perfect for medical and dental clinics, aesthetic centers, and private practices.",
+        "tag": "Healthcare Management"
+      },
+      "sections": {
+        "medical_dashboard": {
+          "title": "Clinical Dashboard",
+          "subtitle": "Unit Control",
+          "content_title": "🏥 360° View of the Clinic",
+          "content_description": "Manage patient flows and medical team performance in an intuitive interface.",
+          "col1_title": "Service",
+          "col1_items": [
+            "Scheduled vs attended patients",
+            "Average waiting time",
+            "Most sought-after specialties",
+            "Cancellation and no-show rate"
+          ],
+          "col2_title": "💰 Health Finance",
+          "col2_items": [
+            "Billing by insurance or private",
+            "Medical clinical audit control",
+            "Transfers to professionals",
+            "Clinic cash flow"
+          ]
+        },
+        "scheduling": {
+          "title": "Intelligent Schedule",
+          "subtitle": "Total Organization",
+          "content_description": "Fast scheduling that avoids conflicts and optimizes professional time.",
+          "items": [
+            "Multi-schedules by professional or room",
+            "Automatic reminders via WhatsApp/Email",
+            "Intelligent waiting list",
+            "One-click appointment confirmation"
+          ]
+        },
+        "patient_records": {
+          "title": "Digital Record",
+          "subtitle": "Security and Agility",
+          "content_title": "📁 Secure Clinical History",
+          "content_highlight": "Access patient information from anywhere with total security.",
+          "card1_title": "🩺 Clinical",
+          "card1_items": [
+            "Patient evolution",
+            "Digital prescriptions",
+            "Exam requests",
+            "Personalized anamnesis"
+          ],
+          "card2_title": "🖼️ Exams",
+          "card2_items": [
+            "Attachment of reports and images",
+            "Comparison of results",
+            "Laboratory history",
+            "Critical value alerts"
+          ]
+        },
+        "final_results": {
+          "title": "🏁 Medical Excellence",
+          "subtitle": "Results that Appear",
+          "description": "An organized clinic serves better and generates more trust in patients.",
+          "results": [
+            "Faster and more focused service",
+            "Elimination of paper and bureaucracy",
+            "Better financial control",
+            "Reduction in patient absences",
+            "Compliance with health standards",
+            "Increased patient retention"
+          ],
+          "cta_text": "Request Clinic Demo →"
+        }
+      }
+    },
+    "scheduling": {
+      "main_title": "Never lose customers again due to scheduling failures",
+      "subtitle": "Automate your schedule and maximize your team's time with intelligence.",
+      "highlight": "More productivity. More organization. More results.",
+      "features": [
+        "Intelligent automatic scheduling",
+        "Reduction of forgetfulness",
+        "More team productivity",
+        "Total schedule organization",
+        "Maximum use of time"
+      ]
+    }
+  }
+}

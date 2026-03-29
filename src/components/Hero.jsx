@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
             {/* Background Gradients */}
@@ -15,7 +18,7 @@ const Hero = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-nhiquela-purple text-sm font-medium mb-6">
-                        Nossos Serviços
+                        {t('hero.tag')}
                     </span>
                 </motion.div>
 
@@ -25,8 +28,8 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="text-5xl md:text-7xl font-bold tracking-tight mb-8"
                 >
-                    Tudo que você precisa para{' '}
-                    <span className="text-gradient-purple">crescer</span>
+                    {t('hero.title_main')}{' '}
+                    <span className="text-gradient-purple">{t('hero.title_highlight')}</span>
                 </motion.h1>
 
                 <motion.p
@@ -35,8 +38,7 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
                 >
-                    Oferecemos soluções completas de desenvolvimento, do conceito ao lançamento e além.
-                    Transforme sua visão digital em realidade.
+                    {t('hero.description')}
                 </motion.p>
             </div>
         </section>

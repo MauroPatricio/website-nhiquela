@@ -2,364 +2,359 @@ import {
     BarChart3, TrendingUp, Bell, Users, Star, UtensilsCrossed, QrCode, FileText, CreditCard, Sparkles, Shield, Check,
     Wallet, FileSignature, Receipt, Database, LayoutDashboard, Calendar, History, Activity, Microscope
 } from 'lucide-react';
-import screenshot1 from '../assets/antigravity/screenshot-1.jpg';
-import screenshot2 from '../assets/antigravity/screenshot-2.jpg';
-import screenshot3 from '../assets/antigravity/screenshot-3.jpg';
-import screenshot5 from '../assets/antigravity/screenshot-5.jpg';
 
-export const restaurantContent = {
+import luxury1 from '../assets/antigravity/luxury/luxury_restaurant_1.png';
+import luxury2 from '../assets/antigravity/luxury/luxury_restaurant_2.png';
+import luxury3 from '../assets/antigravity/luxury/luxury_restaurant_3.png';
+import luxury4 from '../assets/antigravity/luxury/luxury_restaurant_4.png';
+import luxury5 from '../assets/antigravity/luxury/luxury_restaurant_5.png';
+
+export const getRestaurantContent = (t) => ({
     title: {
-        main: "Plataforma Inteligente de",
-        highlight: "Gestão de Restaurantes",
-        description: "Tudo o que o seu restaurante precisa. Num único sistema.",
-        subDescription: "Mais do que um QR Menu. Uma central completa de controlo, crescimento e lucro para restaurantes modernos.",
-        tag: "Antigravity Platform"
+        main: t('demos.restaurant.title.main'),
+        highlight: t('demos.restaurant.title.highlight'),
+        description: t('demos.restaurant.title.description'),
+        subDescription: t('demos.restaurant.title.subDescription'),
+        tag: t('demos.restaurant.title.tag')
     },
     sections: [
         {
             type: "dashboard_premium",
-            title: "Dashboard Premium",
-            subtitle: "Visão do Dono (Owner)",
+            title: t('demos.restaurant.sections.dashboard_premium.title'),
+            subtitle: t('demos.restaurant.sections.dashboard_premium.subtitle'),
             icon: BarChart3,
+            backgroundImage: luxury1,
             gradient: "from-orange-500 to-amber-600",
             textColor: "text-orange-400",
             content: {
-                title: "🎯 O Cérebro do Negócio",
-                description: "Acompanhe todos os seus restaurantes em tempo real, com dados claros, gráficos intuitivos e decisões baseadas em números — não em achismos.",
+                title: t('demos.restaurant.sections.dashboard_premium.content_title'),
+                description: t('demos.restaurant.sections.dashboard_premium.content_description'),
                 columns: [
                     {
-                        title: "Performance em Tempo Real",
+                        title: t('demos.restaurant.sections.dashboard_premium.col1_title'),
                         icon: TrendingUp,
-                        items: [
-                            "Receita diária, semanal e mensal",
-                            "Comparação de faturação entre restaurantes",
-                            "Total de pedidos realizados",
-                            "Crescimento percentual por unidade",
-                            "Ticket médio por restaurante"
-                        ]
+                        items: t('demos.restaurant.sections.dashboard_premium.col1_items', { returnObjects: true })
                     },
                     {
-                        title: "📊 Visual Moderno e Intuitivo",
-                        items: [
-                            "Gráficos de linhas (tendências)",
-                            "Gráficos de barras (comparações)",
-                            "Gráficos circulares (distribuição)"
-                        ]
+                        title: t('demos.restaurant.sections.dashboard_premium.col2_title'),
+                        items: t('demos.restaurant.sections.dashboard_premium.col2_items', { returnObjects: true })
                     }
                 ],
-                image: screenshot3
+                demoCTA: {
+                    text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                    description: t('common.safe_environment'),
+                    link: "https://gestaomodernaonline.com/",
+                    style: "neon"
+                }
             }
         },
         {
             type: "dashboard_individual",
-            title: "Dashboard Individual",
-            subtitle: "Por Restaurante",
+            title: t('demos.restaurant.sections.dashboard_individual.title'),
+            subtitle: t('demos.restaurant.sections.dashboard_individual.subtitle'),
             icon: TrendingUp,
+            backgroundImage: luxury2,
             gradient: "from-blue-500 to-cyan-600",
             textColor: "text-blue-400",
             content: {
-                description: "Cada restaurante tem a sua visão própria, totalmente personalizada.",
+                description: t('demos.restaurant.sections.dashboard_individual.content_description'),
                 cards: [
                     {
-                        title: "💰 Financeiro",
+                        title: t('demos.restaurant.sections.dashboard_individual.card1_title'),
                         color: "text-green-400",
-                        items: [
-                            "Receita diária e mensal",
-                            "Total faturado",
-                            "Pagamentos confirmados e pendentes",
-                            "Métodos de pagamento mais utilizados"
-                        ]
+                        items: t('demos.restaurant.sections.dashboard_individual.card1_items', { returnObjects: true })
                     },
                     {
-                        title: "🍽️ Operacional",
+                        title: t('demos.restaurant.sections.dashboard_individual.card2_title'),
                         color: "text-purple-400",
-                        items: [
-                            "Pedidos realizados e concluídos",
-                            "Tempo médio de atendimento",
-                            "Pedidos cancelados"
-                        ]
+                        items: t('demos.restaurant.sections.dashboard_individual.card2_items', { returnObjects: true })
                     },
                     {
-                        title: "👥 Clientes",
+                        title: t('demos.restaurant.sections.dashboard_individual.card3_title'),
                         color: "text-orange-400",
-                        items: [
-                            "Número de clientes atendidos",
-                            "Clientes recorrentes",
-                            "Avaliação média do restaurante"
-                        ]
+                        items: t('demos.restaurant.sections.dashboard_individual.card3_items', { returnObjects: true })
                     }
-                ]
+                ],
+                demoCTA: {
+                    text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                    description: t('common.safe_environment'),
+                    link: "https://gestaomodernaonline.com/",
+                    style: "neon"
+                }
             }
         },
-        // ... (Other sections follow same pattern, keeping existing content)
-        // For brevity in this file creation, I will include the existing sections mapped to this structure
-        // I'll implement the full structure for Restaurant to ensure no regression
         {
             type: "order_management",
-            title: "Gestão de Pedidos",
-            subtitle: "Em Tempo Real",
+            title: t('demos.restaurant.sections.order_management.title'),
+            subtitle: t('demos.restaurant.sections.order_management.subtitle'),
             icon: Bell,
+            backgroundImage: luxury3,
             gradient: "from-red-500 to-pink-600",
             textColor: "text-red-400",
             content: {
-                title: "🔔 O Coração do Sistema",
-                highlight: "Nunca mais perca um pedido.",
+                title: t('demos.restaurant.sections.order_management.content_title'),
+                highlight: t('demos.restaurant.sections.order_management.content_highlight'),
                 columns: [
                     {
-                        items: [
-                            "Lista de pedidos ativos em tempo real",
-                            "Notificação sonora contínua para novos pedidos",
-                            "Destaque visual da mesa que solicitou"
-                        ]
+                        items: t('demos.restaurant.sections.order_management.col1_items', { returnObjects: true })
                     },
                     {
-                        title: "Estados do Pedido:",
+                        title: t('demos.restaurant.sections.order_management.col2_title'),
                         statusItems: [
-                            { color: "bg-yellow-400", text: "⏳ Pendente" },
-                            { color: "bg-green-400", text: "✅ Aceite" },
-                            { color: "bg-blue-400", text: "👨‍🍳 Em preparação" },
-                            { color: "bg-purple-400", text: "🍽️ Pronto" },
-                            { color: "bg-emerald-400", text: "💳 Pago" }
+                            { color: "bg-yellow-400", text: t('demos.restaurant.sections.order_management.status_items.0') },
+                            { color: "bg-green-400", text: t('demos.restaurant.sections.order_management.status_items.1') },
+                            { color: "bg-blue-400", text: t('demos.restaurant.sections.order_management.status_items.2') },
+                            { color: "bg-purple-400", text: t('demos.restaurant.sections.order_management.status_items.3') },
+                            { color: "bg-emerald-400", text: t('demos.restaurant.sections.order_management.status_items.4') }
                         ]
                     }
                 ],
-                image: screenshot5,
-                flow: [
-                    "Pedido confirmado",
-                    "Envio direto para a cozinha",
-                    "Atualização instantânea para o cliente"
-                ]
+                flow: t('demos.restaurant.sections.order_management.flow', { returnObjects: true }),
+                demoCTA: {
+                    text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                    description: t('common.safe_environment'),
+                    link: "https://gestaomodernaonline.com/",
+                    style: "neon"
+                }
             }
         },
-        // Skipping some less critical sections for brevity but keeping structure consistent
         {
-            type: "final_results",
-            title: "🏁 Resultado Final",
-            subtitle: "Impacto no Negócio",
-            icon: Check, // Using Check from lucide-react (ensure it's imported)
-            gradient: "from-orange-500 to-amber-600",
-            textColor: "text-orange-400",
-            description: "Uma plataforma completa, moderna e escalável que oferece:",
-            results: [
-                "Controlo total do negócio",
-                "Decisões baseadas em dados",
-                "Mais eficiência operacional",
-                "Maior faturação",
-                "Experiência premium para clientes",
-                "Alto valor comercial para o restaurante"
-            ],
-            cta: {
-                text: "Acessar Plataforma →",
-                link: "https://gestaomodernaonline.com/",
-                gradient: "from-orange-500 to-amber-600"
-            }
-        }
-    ]
-};
-
-export const microcreditContent = {
-    title: {
-        main: "Gestão Profissional de",
-        highlight: "Microcréditos",
-        description: "Transforma o teu microcrédito num negócio organizado, seguro e lucrativo.",
-        subDescription: "Sistema completo para gestão de contratos, clientes e cobranças automáticas.",
-        tag: "Finance Platform"
-    },
-    sections: [
-        {
-            type: "clients_organization",
-            title: "Organização de Clientes",
-            subtitle: "Tudo num só lugar",
+            type: "client_engagement",
+            title: t('demos.restaurant.sections.client_engagement.title'),
+            subtitle: t('demos.restaurant.sections.client_engagement.subtitle'),
             icon: Users,
+            backgroundImage: luxury4,
             gradient: "from-emerald-500 to-green-600",
             textColor: "text-emerald-400",
             content: {
-                title: "✅ Todos os clientes organizados",
-                description: "BI, NUIT, documentos, histórico de empréstimos e avaliação de risco — tudo digital, seguro e acessível.",
-                image: null // Placeholder or reuse generic abstract image if needed
-            }
-        },
-        {
-            type: "contracts",
-            title: "Contratos e Empréstimos",
-            subtitle: "Em Minutos",
-            icon: FileSignature,
-            gradient: "from-teal-500 to-emerald-600",
-            textColor: "text-teal-400",
-            content: {
-                title: "✅ Zero erros. Zero confusão.",
-                description: "Define valores, juros, prazos e o sistema gera automaticamente o plano de pagamento.",
-                items: [
-                    "Criação automática de contratos",
-                    "Cálculo automático de juros",
-                    "Planos de pagamento flexíveis"
-                ]
-            }
-        },
-        {
-            type: "automated_billing",
-            title: "Cobranças Automáticas",
-            subtitle: "Sem Perseguição",
-            icon: Bell,
-            gradient: "from-green-500 to-lime-600",
-            textColor: "text-green-400",
-            content: {
-                title: "✅ Controle total de vencimentos",
-                description: "O sistema controla vencimentos, atrasos, multas e juros. Tu vês quem deve, quanto deve e há quantos dias — em tempo real."
-            }
-        },
-        {
-            type: "debt_recovery",
-            title: "Recuperação de Crédito",
-            subtitle: "Menos Calotes",
-            icon: Shield,
-            gradient: "from-emerald-600 to-teal-700",
-            textColor: "text-emerald-400",
-            content: {
-                title: "✅ Mais dinheiro no caixa",
-                description: "Listas de inadimplentes, relatórios de recuperação e alertas automáticos fazem o teu dinheiro voltar."
-            }
-        },
-        {
-            type: "financial_dashboard",
-            title: "Visão Clara do Lucro",
-            subtitle: "Sem Adivinhar",
-            icon: BarChart3,
-            gradient: "from-green-600 to-emerald-800",
-            textColor: "text-green-400",
-            content: {
-                title: "📊 Dashboard Financeiro",
-                columns: [
-                    {
-                        title: "Métricas Essenciais",
-                        items: [
-                            "Quanto emprestaste",
-                            "Quanto recebeste",
-                            "Quanto está em atraso",
-                            "Quanto realmente lucraste"
-                        ]
-                    }
-                ]
+                description: t('demos.restaurant.sections.client_engagement.content_description'),
+                items: t('demos.restaurant.sections.client_engagement.items', { returnObjects: true }),
+                demoCTA: {
+                    text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                    description: t('common.safe_environment'),
+                    link: "https://gestaomodernaonline.com/",
+                    style: "neon"
+                }
             }
         },
         {
             type: "final_results",
-            title: "🏁 Resultado Final",
-            subtitle: "Impacto Financeiro",
+            title: t('demos.restaurant.sections.final_results.title'),
+            subtitle: t('demos.restaurant.sections.final_results.subtitle'),
             icon: Check,
-            gradient: "from-emerald-600 to-green-700",
-            textColor: "text-emerald-400",
-            description: "Uma plataforma robusta para o seu negócio financeiro.",
-            results: [
-                "Organização total",
-                "Segurança nos dados",
-                "Cobranças eficientes",
-                "Redução de inadimplência",
-                "Lucro real visível"
-            ],
+            backgroundImage: luxury5,
+            gradient: "from-orange-500 to-amber-600",
+            textColor: "text-orange-400",
+            description: t('demos.restaurant.sections.final_results.description'),
+            results: t('demos.restaurant.sections.final_results.results', { returnObjects: true }),
             cta: {
-                text: "Ver Mais Detalhes →",
-                link: "https://microcredito.gestaomodernaonline.com",
-                gradient: "from-emerald-500 to-green-600"
+                text: t('demos.restaurant.sections.final_results.cta_text'),
+                link: "https://gestaomodernaonline.com/",
+                gradient: "from-orange-500 to-amber-600"
+            },
+            demoCTA: {
+                text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                description: t('common.safe_environment'),
+                link: "https://gestaomodernaonline.com/",
+                style: "neon"
             }
         }
     ]
-};
+});
 
-export const clinicContent = {
+export const getMicrocreditContent = (t) => ({
     title: {
-        main: "Gestão Inteligente de",
-        highlight: "Clínicas e Laboratórios",
-        description: "Controle Total do Negócio (Visão do Owner)",
-        subDescription: "Você passa de “gestor reativo” para dono estratégico, com decisões baseadas em dados reais.",
-        tag: "Health Platform"
+        main: t('demos.microcredit.title.main'),
+        highlight: t('demos.microcredit.title.highlight'),
+        description: t('demos.microcredit.title.description'),
+        subDescription: t('demos.microcredit.title.subDescription'),
+        tag: t('demos.microcredit.title.tag')
     },
     sections: [
         {
-            type: "owner_view",
-            title: "Controle Total",
-            subtitle: "Visão do Owner",
-            icon: LayoutDashboard, // Replace with appropriate icon
-            gradient: "from-blue-600 to-indigo-600",
-            textColor: "text-blue-400",
+            type: "dashboard_pro",
+            title: t('demos.microcredit.sections.dashboard_pro.title'),
+            subtitle: t('demos.microcredit.sections.dashboard_pro.subtitle'),
+            icon: BarChart3,
+            gradient: "from-emerald-500 to-teal-600",
+            textColor: "text-emerald-400",
             content: {
-                title: "🌐 Imagine abrir o sistema e ver:",
+                title: t('demos.microcredit.sections.dashboard_pro.content_title'),
+                description: t('demos.microcredit.sections.dashboard_pro.content_description'),
                 columns: [
                     {
-                        title: "Visão Geral",
-                        items: [
-                            "Quantas clínicas e laboratórios estão ativos",
-                            "Quantos médicos e colaboradores trabalham consigo",
-                            "Quantos pacientes foram atendidos hoje, esta semana e este mês"
-                        ]
+                        title: t('demos.microcredit.sections.dashboard_pro.col1_title'),
+                        icon: TrendingUp,
+                        items: t('demos.microcredit.sections.dashboard_pro.col1_items', { returnObjects: true })
                     },
                     {
-                        title: "Financeiro & Crescimento",
-                        items: [
-                            "Quanto cada unidade está a faturar",
-                            "Onde está a crescer mais",
-                            "Onde está a perder dinheiro",
-                            "Quais unidades precisam de atenção imediata"
-                        ]
+                        title: t('demos.microcredit.sections.dashboard_pro.col2_title'),
+                        items: t('demos.microcredit.sections.dashboard_pro.col2_items', { returnObjects: true })
                     }
                 ]
             }
         },
         {
-            type: "unit_management",
-            title: "Gestão Profunda",
-            subtitle: "Por Unidade",
-            icon: Activity,
-            gradient: "from-rose-500 to-pink-600",
-            textColor: "text-rose-400",
+            type: "client_management",
+            title: t('demos.microcredit.sections.client_management.title'),
+            subtitle: t('demos.microcredit.sections.client_management.subtitle'),
+            icon: Users,
+            gradient: "from-blue-500 to-indigo-600",
+            textColor: "text-blue-400",
             content: {
-                description: "Com um clique, você entra dentro de cada unidade e passa a controlar tudo:",
+                description: t('demos.microcredit.sections.client_management.content_description'),
                 cards: [
                     {
-                        title: "🏥 Para Clínicas",
+                        title: t('demos.microcredit.sections.client_management.card1_title'),
                         color: "text-blue-400",
-                        items: [
-                            "Agenda inteligente de consultas",
-                            "Gestão de médicos e especialidades",
-                            "Histórico clínico completo",
-                            "Controlo do staff e faturação",
-                            "Relatórios de desempenho e alertas"
-                        ]
+                        items: t('demos.microcredit.sections.client_management.card1_items', { returnObjects: true })
                     },
                     {
-                        title: "🔬 Para Laboratórios",
-                        color: "text-rose-400",
-                        items: [
-                            "Gestão completa de exames",
-                            "Emissão de resultados",
-                            "Tempo médio de processamento",
-                            "Volume diário, semanal e mensal",
-                            "Controlo de técnicos e alertas críticos"
-                        ]
+                        title: t('demos.microcredit.sections.client_management.card2_title'),
+                        color: "text-indigo-400",
+                        items: t('demos.microcredit.sections.client_management.card2_items', { returnObjects: true })
+                    }
+                ]
+            }
+        },
+        {
+            type: "loan_lifecycle",
+            title: t('demos.microcredit.sections.loan_lifecycle.title'),
+            subtitle: t('demos.microcredit.sections.loan_lifecycle.subtitle'),
+            icon: Wallet,
+            gradient: "from-purple-500 to-violet-600",
+            textColor: "text-purple-400",
+            content: {
+                title: t('demos.microcredit.sections.loan_lifecycle.content_title'),
+                highlight: t('demos.microcredit.sections.loan_lifecycle.content_highlight'),
+                flow: t('demos.microcredit.sections.loan_lifecycle.flow', { returnObjects: true }),
+                demoCTA: {
+                    text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                    description: t('common.safe_environment'),
+                    link: "https://gestaomodernaonline.com/",
+                    style: "neon"
+                }
+            }
+        },
+        {
+            type: "final_results",
+            title: t('demos.microcredit.sections.final_results.title'),
+            subtitle: t('demos.microcredit.sections.final_results.subtitle'),
+            icon: Check,
+            gradient: "from-emerald-500 to-teal-600",
+            textColor: "text-emerald-400",
+            description: t('demos.microcredit.sections.final_results.description'),
+            results: t('demos.microcredit.sections.final_results.results', { returnObjects: true }),
+            demoCTA: {
+                text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                description: t('common.safe_environment'),
+                link: "https://gestaomodernaonline.com/",
+                style: "neon"
+            },
+            cta: {
+                text: t('demos.microcredit.sections.final_results.cta_text'),
+                link: "https://gestaomodernaonline.com/",
+                gradient: "from-emerald-500 to-teal-600"
+            }
+        }
+    ]
+});
+
+export const getClinicContent = (t) => ({
+    title: {
+        main: t('demos.clinic.title.main'),
+        highlight: t('demos.clinic.title.highlight'),
+        description: t('demos.clinic.title.description'),
+        subDescription: t('demos.clinic.title.subDescription'),
+        tag: t('demos.clinic.title.tag')
+    },
+    sections: [
+        {
+            type: "medical_dashboard",
+            title: t('demos.clinic.sections.medical_dashboard.title'),
+            subtitle: t('demos.clinic.sections.medical_dashboard.subtitle'),
+            icon: LayoutDashboard,
+            gradient: "from-rose-500 to-red-600",
+            textColor: "text-rose-400",
+            content: {
+                title: t('demos.clinic.sections.medical_dashboard.content_title'),
+                description: t('demos.clinic.sections.medical_dashboard.content_description'),
+                columns: [
+                    {
+                        title: t('demos.clinic.sections.medical_dashboard.col1_title'),
+                        icon: Activity,
+                        items: t('demos.clinic.sections.medical_dashboard.col1_items', { returnObjects: true })
+                    },
+                    {
+                        title: t('demos.clinic.sections.medical_dashboard.col2_title'),
+                        items: t('demos.clinic.sections.medical_dashboard.col2_items', { returnObjects: true })
+                    }
+                ]
+            }
+        },
+        {
+            type: "scheduling",
+            title: t('demos.clinic.sections.scheduling.title'),
+            subtitle: t('demos.clinic.sections.scheduling.subtitle'),
+            icon: Calendar,
+            gradient: "from-blue-500 to-sky-600",
+            textColor: "text-blue-400",
+            content: {
+                description: t('demos.clinic.sections.scheduling.content_description'),
+                items: t('demos.clinic.sections.scheduling.items', { returnObjects: true }),
+                demoCTA: {
+                    text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                    description: t('common.safe_environment'),
+                    link: "https://gestaomodernaonline.com/",
+                    style: "neon"
+                }
+            }
+        },
+        {
+            type: "patient_records",
+            title: t('demos.clinic.sections.patient_records.title'),
+            subtitle: t('demos.clinic.sections.patient_records.subtitle'),
+            icon: FileText,
+            gradient: "from-indigo-500 to-blue-600",
+            textColor: "text-indigo-400",
+            content: {
+                title: t('demos.clinic.sections.patient_records.content_title'),
+                highlight: t('demos.clinic.sections.patient_records.content_highlight'),
+                cards: [
+                    {
+                        title: t('demos.clinic.sections.patient_records.card1_title'),
+                        color: "text-indigo-400",
+                        items: t('demos.clinic.sections.patient_records.card1_items', { returnObjects: true })
+                    },
+                    {
+                        title: t('demos.clinic.sections.patient_records.card2_title'),
+                        color: "text-blue-400",
+                        items: t('demos.clinic.sections.patient_records.card2_items', { returnObjects: true })
                     }
                 ]
             }
         },
         {
             type: "final_results",
-            title: "🏁 Resultado Final",
-            subtitle: "Impacto na Saúde",
+            title: t('demos.clinic.sections.final_results.title'),
+            subtitle: t('demos.clinic.sections.final_results.subtitle'),
             icon: Check,
-            gradient: "from-blue-600 to-indigo-600",
-            textColor: "text-blue-400",
-            description: "Excelência na gestão de saúde.",
-            results: [
-                "Mais organização",
-                "Menos erros",
-                "Mais produtividade",
-                "Melhor atendimento ao paciente",
-                "Decisões estratégicas"
-            ],
+            gradient: "from-rose-500 to-red-600",
+            textColor: "text-rose-400",
+            description: t('demos.clinic.sections.final_results.description'),
+            results: t('demos.clinic.sections.final_results.results', { returnObjects: true }),
+            demoCTA: {
+                text: `${t('common.premium_experience')} • ${t('common.free_trial')}`,
+                description: t('common.safe_environment'),
+                link: "https://gestaomodernaonline.com/",
+                style: "neon"
+            },
             cta: {
-                text: "Acessar Plataforma →",
-                link: "https://clinica.gestaomodernaonline.com",
-                gradient: "from-blue-500 to-indigo-600"
+                text: t('demos.clinic.sections.final_results.cta_text'),
+                link: "https://gestaomodernaonline.com/",
+                gradient: "from-rose-500 to-red-600"
             }
         }
     ]
-};
+});
+

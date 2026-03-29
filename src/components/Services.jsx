@@ -1,47 +1,50 @@
 import React from 'react';
 import { Smartphone, Code, Palette, Zap, Shield, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-const services = [
-    {
-        icon: Smartphone,
-        color: 'bg-nhiquela-cyan',
-        title: 'Apps Mobile',
-        description: 'Aplicativos nativos e híbridos para iOS e Android com design moderno e performance excepcional.'
-    },
-    {
-        icon: Code,
-        color: 'bg-nhiquela-purple',
-        title: 'Desenvolvimento Web',
-        description: 'Plataformas web responsivas e sistemas personalizados que escalam com o seu negócio.'
-    },
-    {
-        icon: Palette,
-        color: 'bg-nhiquela-cyan', // Alternating colors or specific ones
-        title: 'UI/UX Design',
-        description: 'Interfaces intuitivas e experiências de usuário que encantam e convertem visitantes em clientes.'
-    },
-    {
-        icon: Zap,
-        color: 'bg-nhiquela-purple',
-        title: 'Integrações',
-        description: 'Conectamos seu aplicativo com APIs, gateways de pagamento e sistemas externos.'
-    },
-    {
-        icon: Shield,
-        color: 'bg-nhiquela-cyan',
-        title: 'Segurança',
-        description: 'Proteção de dados e conformidade com LGPD para manter seus usuários seguros.'
-    },
-    {
-        icon: Rocket,
-        color: 'bg-nhiquela-purple',
-        title: 'Suporte Contínuo',
-        description: 'Manutenção, atualizações e suporte técnico para garantir o funcionamento perfeito.'
-    }
-];
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+    const { t } = useTranslation();
+
+    const services = [
+        {
+            icon: Smartphone,
+            color: 'bg-nhiquela-cyan',
+            title: t('services.mobile.title'),
+            description: t('services.mobile.description')
+        },
+        {
+            icon: Code,
+            color: 'bg-nhiquela-purple',
+            title: t('services.web.title'),
+            description: t('services.web.description')
+        },
+        {
+            icon: Palette,
+            color: 'bg-nhiquela-cyan',
+            title: t('services.design.title'),
+            description: t('services.design.description')
+        },
+        {
+            icon: Zap,
+            color: 'bg-nhiquela-purple',
+            title: t('services.integrations.title'),
+            description: t('services.integrations.description')
+        },
+        {
+            icon: Shield,
+            color: 'bg-nhiquela-cyan',
+            title: t('services.security.title'),
+            description: t('services.security.description')
+        },
+        {
+            icon: Rocket,
+            color: 'bg-nhiquela-purple',
+            title: t('services.support.title'),
+            description: t('services.support.description')
+        }
+    ];
+
     return (
         <section id="servicos" className="py-20 bg-nhiquela-dark relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

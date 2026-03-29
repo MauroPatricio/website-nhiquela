@@ -1,99 +1,88 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const MouseFollower = () => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [isMoving, setIsMoving] = useState(false);
-    const lightRef = useRef(null);
-    const glowRef = useRef(null);
-    const timeoutRef = useRef(null);
+  const cursorRef = useRef(null);
+  const glowRef = useRef(null);
 
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
-            setIsMoving(true);
+  const mouse = useRef({ x: 0, y: 0 });
+  const pos = useRef({ x: 0, y: 0 });
 
-            // Clear previous timeout
-            if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-            }
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      mouse.current.x = e.clientX;
+      mouse.current.y = e.clientY;
+    };
 
-            // Set new timeout to detect when mouse stops
-            timeoutRef.current = setTimeout(() => {
-                setIsMoving(false);
-            }, 100);
-        };
+    window.addEventListener("mousemove", handleMouseMove);
 
-        window.addEventListener('mousemove', handleMouseMove);
+    const animate = () => {
+      // Smooth follow (lerp)
+      pos.current.x += (mouse.current.x - pos.current.x) * 0.12;
+      pos.current.y += (mouse.current.y - pos.current.y) * 0.12;
 
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-            if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-            }
-        };
-    }, []);
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0)`;
+      }
 
-    return (
-        <>
-            {/* Main cursor light */}
-            <div
-                ref={lightRef}
-                className="pointer-events-none fixed z-50 mix-blend-screen transition-opacity duration-300"
-                style={{
-                    left: `${mousePosition.x}px`,
-                    top: `${mousePosition.y}px`,
-                    transform: 'translate(-50%, -50%)',
-                    opacity: isMoving ? 0.8 : 0.4,
-                }}
-            >
-                {/* Inner bright core */}
-                <div className="absolute inset-0 w-32 h-32 -translate-x-1/2 -translate-y-1/2">
-                    <div className="absolute inset-0 bg-gradient-radial from-nhiquela-purple/60 via-nhiquela-pink/40 to-transparent rounded-full blur-xl animate-pulse" />
-                </div>
+      if (glowRef.current) {
+        glowRef.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0)`;
+      }
 
-                {/* Middle glow layer */}
-                <div className="absolute inset-0 w-48 h-48 -translate-x-1/2 -translate-y-1/2">
-                    <div className="absolute inset-0 bg-gradient-radial from-nhiquela-cyan/40 via-nhiquela-purple/20 to-transparent rounded-full blur-2xl" />
-                </div>
+      requestAnimationFrame(animate);
+    };
 
-                {/* Outer subtle halo */}
-                <div className="absolute inset-0 w-64 h-64 -translate-x-1/2 -translate-y-1/2">
-                    <div className="absolute inset-0 bg-gradient-radial from-white/10 via-nhiquela-cyan/10 to-transparent rounded-full blur-3xl" />
-                </div>
-            </div>
+    animate();
 
-            {/* Trailing glow effect */}
-            <div
-                ref={glowRef}
-                className="pointer-events-none fixed z-40 mix-blend-screen transition-all duration-500 ease-out"
-                style={{
-                    left: `${mousePosition.x}px`,
-                    top: `${mousePosition.y}px`,
-                    transform: 'translate(-50%, -50%)',
-                    opacity: isMoving ? 0.6 : 0.2,
-                }}
-            >
-                <div className="absolute inset-0 w-96 h-96 -translate-x-1/2 -translate-y-1/2">
-                    <div className="absolute inset-0 bg-gradient-radial from-nhiquela-purple/20 via-nhiquela-pink/10 to-transparent rounded-full blur-3xl" />
-                </div>
-            </div>
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
-            {/* Ambient light particles */}
-            <div
-                className="pointer-events-none fixed z-30 mix-blend-screen transition-all duration-700 ease-out"
-                style={{
-                    left: `${mousePosition.x}px`,
-                    top: `${mousePosition.y}px`,
-                    transform: 'translate(-50%, -50%)',
-                    opacity: isMoving ? 0.3 : 0.1,
-                }}
-            >
-                <div className="absolute inset-0 w-[32rem] h-[32rem] -translate-x-1/2 -translate-y-1/2">
-                    <div className="absolute inset-0 bg-gradient-radial from-nhiquela-cyan/15 via-transparent to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '3s' }} />
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <>
+      {/* Cursor Core */}
+      <div
+        ref={cursorRef}
+        className="pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-1/2"
+      >
+        <div className="relative w-10 h-10">
+          {/* Core */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 blur-md opacity-90" />
+
+          {/* Inner sharp dot */}
+          <div className="absolute inset-2 rounded-full bg-white opacity-80" />
+        </div>
+      </div>
+
+      {/* Main Glow */}
+      <div
+        ref={glowRef}
+        className="pointer-events-none fixed z-40 -translate-x-1/2 -translate-y-1/2"
+      >
+        <div className="relative w-72 h-72">
+          {/* Soft gradient glow */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-3xl" />
+
+          {/* Secondary subtle glow */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500/10 to-cyan-400/10 blur-2xl" />
+        </div>
+      </div>
+
+      {/* Ambient Aura */}
+      <div className="pointer-events-none fixed inset-0 z-30">
+        <div
+          className="absolute w-[600px] h-[600px] rounded-full blur-[120px] opacity-20"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(168,85,247,0.4) 0%, rgba(34,211,238,0.2) 40%, transparent 70%)",
+            transform: `translate(${pos.current.x - 300}px, ${
+              pos.current.y - 300
+            }px)`,
+          }}
+        />
+      </div>
+    </>
+  );
 };
 
 export default MouseFollower;
