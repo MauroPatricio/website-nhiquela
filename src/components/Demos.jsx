@@ -3,6 +3,7 @@ import { Utensils, Wallet, Heart, Calendar, ChevronLeft, ChevronRight } from 'lu
 import AntigravityModal from './AntigravityModal';
 import { getRestaurantContent, getMicrocreditContent, getClinicContent } from '../data/demoContent';
 import { useTranslation } from 'react-i18next';
+import TiltCard from './TiltCard';
 
 const colorStyles = {
   emerald: {
@@ -199,45 +200,48 @@ const Demos = () => {
         </div>
       </div>
 
-      <div ref={scrollContainerRef} className="flex gap-8 overflow-x-auto px-4 pb-10">
+      <div ref={scrollContainerRef} className="flex gap-8 overflow-x-auto px-4 pb-10 no-scrollbar">
         {demos.map((demo, index) => {
           const styles = colorStyles[demo.color];
           const isDetailedView = !!demo.content;
 
           return (
-            <div
-              key={index}
-              className={`group min-w-[400px] max-w-[400px] px-16 py-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500
-              hover:shadow-[0_0_40px_${styles.text.replace('text-', '')}]
-              hover:ring-2 hover:ring-${demo.color}-400`}
-            >
-              <div className="flex justify-between mb-6">
-                <div className={`w-14 h-14 rounded-xl ${styles.bg} flex items-center justify-center ${styles.text} transition-shadow duration-500 group-hover:shadow-[0_0_20px_currentColor]`}>
-                  <demo.icon size={28} />
-                </div>
-                <span className={`text-xs font-bold ${styles.text}`}>{t('demos.common.popular')}</span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-2 leading-snug">{demo.title}</h3>
-              <p className="text-gray-400 text-sm mb-2 leading-relaxed">{demo.subtitle}</p>
-              <p className={`text-sm font-semibold mb-6 ${styles.text}`}>{demo.highlight}</p>
-
-              <PhoneMockup
-                color={demo.color}
-                link={demo.link}
-                isDetailedView={isDetailedView}
-                onVerMaisClick={() => handleVerMais(demo.content)}
-                t={t}
-              />
-
-              <div className="mt-6 space-y-3">
-                {demo.features.map((f, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm text-gray-300">
-                    <span className={`w-2.5 h-2.5 rounded-full ${styles.dot} shadow-[0_0_8px_currentColor]`}></span>
-                    {f}
+            <div key={index} className="min-w-[400px] max-w-[400px] h-full">
+              <TiltCard className="group">
+                <div
+                  className={`h-full px-16 py-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl transition-all duration-500
+                  group-hover:shadow-[0_0_40px_${styles.text.replace('text-', '')}]
+                  group-hover:ring-2 group-hover:ring-${demo.color}-400`}
+                >
+                  <div className="flex justify-between mb-6">
+                    <div className={`w-14 h-14 rounded-xl ${styles.bg} flex items-center justify-center ${styles.text} transition-shadow duration-500 group-hover:shadow-[0_0_20px_currentColor]`}>
+                      <demo.icon size={28} />
+                    </div>
+                    <span className={`text-xs font-bold ${styles.text}`}>{t('demos.common.popular')}</span>
                   </div>
-                ))}
-              </div>
+
+                  <h3 className="text-xl font-bold text-white mb-2 leading-snug">{demo.title}</h3>
+                  <p className="text-gray-400 text-sm mb-2 leading-relaxed">{demo.subtitle}</p>
+                  <p className={`text-sm font-semibold mb-6 ${styles.text}`}>{demo.highlight}</p>
+
+                  <PhoneMockup
+                    color={demo.color}
+                    link={demo.link}
+                    isDetailedView={isDetailedView}
+                    onVerMaisClick={() => handleVerMais(demo.content)}
+                    t={t}
+                  />
+
+                  <div className="mt-6 space-y-3">
+                    {demo.features.map((f, i) => (
+                      <div key={i} className="flex items-center gap-3 text-sm text-gray-300">
+                        <span className={`w-2.5 h-2.5 rounded-full ${styles.dot} shadow-[0_0_8px_currentColor]`}></span>
+                        {f}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </TiltCard>
             </div>
           );
         })}

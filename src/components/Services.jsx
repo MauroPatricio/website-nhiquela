@@ -2,6 +2,7 @@ import React from 'react';
 import { Smartphone, Code, Palette, Zap, Shield, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import TiltCard from './TiltCard';
 
 const Services = () => {
     const { t } = useTranslation();
@@ -56,15 +57,19 @@ const Services = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-nhiquela-card p-8 rounded-2xl border border-white/5 hover:border-nhiquela-purple/30 transition-all duration-300 group hover:shadow-lg hover:shadow-nhiquela-purple/10"
+                            className="h-full"
                         >
-                            <div className={`w-12 h-12 rounded-xl ${service.color} bg-opacity-20 flex items-center justify-center mb-6 group-hover:bg-opacity-30 transition-all`}>
-                                <service.icon className={`w-6 h-6 text-white`} />
-                            </div>
-                            <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                            <p className="text-gray-400 leading-relaxed text-sm">
-                                {service.description}
-                            </p>
+                            <TiltCard className="group">
+                                <div className="bg-nhiquela-card p-8 rounded-2xl border border-white/5 hover:border-nhiquela-purple/30 transition-all duration-300 h-full hover:shadow-lg hover:shadow-nhiquela-purple/10">
+                                    <div className={`w-12 h-12 rounded-xl ${service.color} bg-opacity-20 flex items-center justify-center mb-6 group-hover:bg-opacity-30 transition-all`}>
+                                        <service.icon className={`w-6 h-6 text-white`} />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                                    <p className="text-gray-400 leading-relaxed text-sm">
+                                        {service.description}
+                                    </p>
+                                </div>
+                            </TiltCard>
                         </motion.div>
                     ))}
                 </div>
